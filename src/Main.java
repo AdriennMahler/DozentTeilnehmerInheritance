@@ -4,11 +4,12 @@ public class Main {
         System.out.println(jana);
         Dozent paul = new Dozent("Paul", "987654");
         System.out.println(paul);
-        //Teilnehmer/Dozent kann man mit Java-kurs Nummer aufrufen - wenn sie/er teilnimmt,
-        // leitet wird println aus Parent Class - JavaKurs aufgerufen mit Method isJavaKurs
-        //und wird die Kurs Nummer dort gezeigt
-        Dozent paulina = new Dozent("Paulina", "987654", 111111);
+        Dozent paulina = new Dozent("Paulina", "987654", true,  111111);
         System.out.println(paulina);
-        paulina.isJavaKurs();
+        paulina.javaKurs();
+        Teilnehmer mary = new Teilnehmer("Mary", "267439", false, 234571);
+        System.out.println(mary);
+        Teilnehmer andreas = new Teilnehmer("Andreas","982537", true, 20999653);
+        System.out.println(andreas);
     }
 }

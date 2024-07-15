@@ -1,20 +1,20 @@
-public class Dozent extends JavaKurs{
+public class Dozent extends Person{
 
-    protected String name;
-    protected String idNummer;
-    //ein Konstruktor ohne Java Nummer Kurs für Dozenten die keine Java leiten
-    public Dozent(String name, String idNummer){
-        this.name=name;
-        this.idNummer=idNummer;
-    }
-    //ein Konstruktor mit Java Nummer Kurs für Dozenten die Java leiten
-    public Dozent(String name, String idNummer, int nummer){
-        super(nummer);
-        this.name=name;
-        this.idNummer=idNummer;
+    Dozent(String name, String idNummer){
+        super(name, idNummer);
     }
 
-    public String toString(){
-        return "Dozent: " + name + ". ID nummer: " + idNummer + ".";
+    public Dozent(String name, String idNummer, boolean javaKurs, int javaKursnummer){
+        super(name, idNummer, javaKurs, javaKursnummer);
     }
+
+   public String toString(){
+        if (javaKurs){
+        return "Dozent: " + name + ". ID nummer: " + idNummer + ". Leitet Java-Kurs: " + javaKursNummer;
+        }else{
+        return "Dozent: " + name + ". ID nummer: " + idNummer;
+        }
+
+    }
+
 }
